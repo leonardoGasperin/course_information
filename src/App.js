@@ -7,15 +7,52 @@ function App() {
   const part3 = "Programming a server with nodeJS and Express";
   const exercicie3 = 14;
 
-  return (
+  const Header = (props) => {
+    return(
+      <h1>{props.course}</h1>
+    );
+  }
+
+  const Part = (props) => {
+    return(
+      <p>{props.part} {props.exercicie}</p>
+    );
+  }
+
+  const Contents =  () => {
+    return (
+      <>
+        <Part part={part1} exercicie={exercicie1}/>
+        <Part part={part2} exercicie={exercicie2}/>
+        <Part part={part3} exercicie={exercicie3}/>
+      </>
+    )
+  }
+
+  const Total = (props) => {
+    return (
+      <p>Number of exercicies {props.exercicie}</p>
+   );
+  }
+
+  return(
     <div>
-      <h1>{course}</h1>
-      <p>{part1} {exercicie1}</p>
-      <p>{part2} {exercicie2}</p>
-      <p>{part3} {exercicie3}</p>
-      <p>Number of exercicies {exercicie1 + exercicie2 + exercicie3}</p>
+      <Header course={course}/>
+      <Contents/>
+      <Total exercicie={exercicie1 + exercicie2 + exercicie3}/>
     </div>
   );
+
+  //return of exercicie 1.1
+  // return (
+  //   <div>
+  //     <Header course={course}/>
+  //     <Contents part={part1} exercicie={exercicie1} />
+  //     <Contents part={part1} exercicie={exercicie1} />
+  //     <Contents part={part1} exercicie={exercicie1} />
+  //     <Total exercicie={exercicie1 + exercicie2 + exercicie3}/>
+  //   </div>
+  // );
 }
 
 export default App;
