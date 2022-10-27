@@ -9,6 +9,9 @@ function App() {
       <Total/>
     </div>
   );
+}
+
+export default App;
 
   //return of exercicie 1.1
   // return (
@@ -20,6 +23,3 @@ function App() {
   //     <Total exercicie={exercicie1 + exercicie2 + exercicie3}/>
   //   </div>
   // );
-}
-
-export default App;
